@@ -76,6 +76,56 @@ header a:hover {
 }
 
 /*Gallery styling*/
+.main-gallery-container {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.image-gallery-container {
+    display: flex;
+    align-items: center;
+}
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.grid-column {
+    flex: 25%;
+    max-width: 20%;
+    padding: 0 4px;
+}
+
+.grid-column img {
+    border: 2px solid rgb(36, 62, 255);
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.grid-column img:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .grid-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .grid-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
 /*Footer styling*/
 
